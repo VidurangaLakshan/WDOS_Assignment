@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Header */
@@ -164,78 +165,7 @@ nav .mobile {
 }
 
 
-/*
-header{
-    background-color: white;
-    padding-right: 20px;
-    padding-left: 20px;
-
-}
-
-.header-div{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar{
-    display: flex;
-    padding-right: 20px;
-}
-.navbar a{
-    color:black;
-    text-decoration: none;
-    font-weight: 500;
-    padding:10px 15px;
-    border-radius: 3px;
-    transition: ease .40;
-    text-align: center;
-    font-size: 18px;
-}
-.navbar a:hover{
-    background-color: white;
-    color: black;
-    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
-    border-radius: 3px;
-}
-
-
-.navbar .scroll {
-    display: none;
-}
-
-.navbar .navbar:hover .scroll{
-    display:block;
-    position: absolute;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-}
-
-.navbar .navbar:hover .scroll li{
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 8px;
-    margin-bottom: 18px;
-}
-
-
-
-
-.header-div p{
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    line-height: 1.5;
-}
-.header .img img{
-    width: 65px;
-    padding: 20px;
-    padding-left:70px;
-}
-*/
-/* Section 1*/
+/* home section */
 
 .home{
     background-image: url("../images/bentota\ back.jpeg");
@@ -343,7 +273,6 @@ header{
     padding-right: 100px;
     align-items: center;
     justify-content: space-between;
-    /*flex-direction: row-reverse;*/
     background-color: rgb(245, 245, 245);
 }
 
@@ -461,15 +390,7 @@ header{
         }
     }
 
-/* section 4 */
-
-/*
-.gallery {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-}
-*/
+/* image gallery section */
 
 .gallery {
     display: grid;
@@ -630,10 +551,7 @@ header{
 }
 
 
-
-
-
-/* section 6 */
+/* map section */
 
 .details5 {
     display: flex;
@@ -643,7 +561,6 @@ header{
     padding-right: 100px;
     align-items: center;
     justify-content: space-between;
-    /*flex-direction: row-reverse;*/
     background-color: rgb(133, 121, 99);
 }
 
@@ -1059,7 +976,6 @@ header{
 footer{
     color: white;
     text-align: center;
-    /*background-color: rgb(25, 57, 46);*/
     background-color: black;
     padding: 25px;
 }
@@ -1071,7 +987,6 @@ footer{
     footer{
         color: white;
         text-align: center;
-        /*background-color: rgb(25, 57, 46);*/
         background-color: black;
         padding: 25px;
         font-size: 14px;
@@ -1085,7 +1000,6 @@ footer{
     footer{
         color: white;
         text-align: center;
-        /*background-color: rgb(25, 57, 46);*/
         background-color: black;
         padding: 25px;
         font-size: 18px;

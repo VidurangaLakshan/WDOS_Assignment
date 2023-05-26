@@ -1,9 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
+/* Header */
 
 body {
     background-color: white;
@@ -164,80 +165,7 @@ nav .mobile {
 }
 
 
-
-
-/* Header */
-/*
-header{
-    background-color: white;
-    padding-right: 20px;
-    padding-left: 20px;
-
-}
-
-.header-div{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar{
-    display: flex;
-    padding-right: 20px;
-}
-.navbar a{
-    color:black;
-    text-decoration: none;
-    font-weight: 500;
-    padding:10px 15px;
-    border-radius: 4px;
-    transition: ease .40;
-    text-align: center;
-    font-size: 18px;
-}
-.navbar a:hover{
-    background-color: white;
-    color: black;
-    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
-    border-radius: 3px;
-}
-
-.navbar .scroll {
-    display: none;
-}
-
-.navbar .navbar:hover .scroll{
-    display:block;
-    position: absolute;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-}
-
-.navbar .navbar:hover .scroll li{
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 8px;
-    margin-bottom: 18px;
-}
-
-
-
-.header-div p{
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    line-height: 1.5;
-}
-.header .img img{
-    width: 65px;
-    padding: 20px;
-    padding-left:70px;
-}
-*/
-
-/* Section 1*/
+/* home section */
 
 .home{
     background-image: url("../images/p2-back.jpg");
@@ -335,7 +263,7 @@ header{
     }
 }
 
-/* section 2 */
+/* turtle 1 section */
 
 .details1 {
     display: flex;
@@ -446,7 +374,7 @@ header{
     }
 }
 
-/* section 3 */
+/* turtle 1 map section */
 
 .details2{
     background-color: rgb(205, 226, 244);
@@ -550,7 +478,7 @@ header{
     }
 }
 
-/* section 4 */
+/* turtle 2 section */
 
 .details3 {
     display: flex;
@@ -661,7 +589,7 @@ header{
     }
 }
 
-/* section 5 */
+/* turtle 2 map section */
 
 .details4{
     background-color: rgb(151, 192, 230);
@@ -766,7 +694,7 @@ header{
 }
 
 
-/* section 6 */
+/* turtle 3 section */
 
 .details5 {
     display: flex;
@@ -878,7 +806,7 @@ header{
 }
 
 
-/* section 7 */
+/* turtle 3 map section */
 
 .details6{
     background-color: rgb(98, 159, 216);
@@ -981,7 +909,7 @@ header{
     }
 }
 
-/* section 8 */
+/* turtle 4 section */
 
 .details7 {
     display: flex;
@@ -1097,7 +1025,7 @@ header{
 
 
 
-/* section 9 */
+/* turtle 4 map section */
 
 .details8{
     background-color: rgb(54, 109, 161);
@@ -1205,7 +1133,7 @@ header{
 }
 
 
-/*summary tables*/
+/* summary tables section */
 
 .table-text h2{
     background-color: rgb(32, 76, 117);
@@ -1602,7 +1530,6 @@ header{
 footer{
     color: white;
     text-align: center;
-    /*background-color: rgb(25, 57, 46);*/
     background-color: black;
     padding: 25px;
 }
@@ -1613,7 +1540,6 @@ footer{
     footer{
         color: white;
         text-align: center;
-        /*background-color: rgb(25, 57, 46);*/
         background-color: black;
         padding: 25px;
         font-size: 14px;
@@ -1627,7 +1553,6 @@ footer{
     footer{
         color: white;
         text-align: center;
-        /*background-color: rgb(25, 57, 46);*/
         background-color: black;
         padding: 25px;
         font-size: 18px;
