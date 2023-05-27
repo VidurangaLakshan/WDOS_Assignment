@@ -157,7 +157,7 @@ nav .mobile {
 
 
     nav ul li {
-        margin: 10px 0;
+        margin: 1px 0;
     }
 
     nav li a{
@@ -245,7 +245,7 @@ nav .mobile {
         font-size: 30px;
         text-align: center;
         margin-left: 30%;
-        padding-top: 225px;
+        padding-top: 180px;
 
     }
 
@@ -545,7 +545,6 @@ nav .mobile {
     text-align: center;
     border: 2px solid black;
     background-color: white;
-    ;
     width: 375px;
     height: fit-content;
     box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
@@ -556,15 +555,20 @@ nav .mobile {
     padding-top: 3%;
     font-size: 20px;
     line-height: 1.5;
-    padding-bottom: 20px;
+    padding-bottom: 15%;
 
 }
 
 .stats .blocks .block h2 {
     text-align: center;
-    padding-top: 15%;
+    padding-top: 10%;
     font-size: 80px;
     color: rgb(76, 115, 151)
+}
+
+@media only screen and (max-width: 1442px) {
+    
+    
 }
 
 /* Mobile Sized Screens */
@@ -608,13 +612,13 @@ nav .mobile {
         line-height: 1.5;
         padding-left: 5px;
         padding-right: 5px;
-        padding-bottom: 20px;
+        padding-bottom: 15%;
 
     }
 
     .stats .blocks .block h2 {
         text-align: center;
-        padding-top: 15%;
+        padding-top: 10%;
         font-size: 40px;
         color: rgb(76, 115, 151);
     }
@@ -662,12 +666,12 @@ nav .mobile {
         line-height: 1.5;
         padding-left: 5px;
         padding-right: 5px;
-        padding-bottom: 20px;
+        padding-bottom: 15%;
     }
 
     .stats .blocks .block h2 {
         text-align: center;
-        padding-top: 15%;
+        padding-top: 10%;
         font-size: 60px;
         color: rgb(76, 115, 151);
     }
