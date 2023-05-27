@@ -210,7 +210,7 @@ nav .mobile {
     font-size: 70px;
     text-align: center;
     margin-left: 30%;
-    padding-top: 350px;
+    padding-top: 200px;
 
 }
 
@@ -245,7 +245,8 @@ nav .mobile {
         font-size: 30px;
         text-align: center;
         margin-left: 30%;
-        padding-top: 180px;
+        /*padding-top: 180px;*/
+        padding-top: 40px;
 
     }
 
@@ -282,7 +283,8 @@ nav .mobile {
         font-size: 40px;
         text-align: center;
         margin-left: 30%;
-        padding-top: 250px;
+        /*padding-top: 250px;*/
+        padding-top: 150px;
 
     }
 
@@ -546,7 +548,7 @@ nav .mobile {
     border: 2px solid black;
     background-color: white;
     width: 375px;
-    height: fit-content;
+    height: 225px;
     box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
 }
 
@@ -601,7 +603,7 @@ nav .mobile {
         border: 2px solid black;
         background-color: white;
         width: 100%;
-        height: fit-content;
+        height: 140px;
         box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
     }
 
@@ -655,7 +657,7 @@ nav .mobile {
         border: 2px solid black;
         background-color: white;
         width: 100%;
-        height: fit-content;
+        height: 180px;
         box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
     }
 
@@ -799,7 +801,7 @@ nav .mobile {
         padding: 20px;
         height: fit-content;
         width: 100%;
-        padding-bottom: 10px;
+        /*padding-bottom: 10px;*/
     }
 
     .other-hatcheries .block .img img {
@@ -884,7 +886,7 @@ nav .mobile {
         padding: 20px;
         height: fit-content;
         width: 100%;
-        padding-bottom: 10px;
+        /*padding-bottom: 10px;*/
     }
 
     .other-hatcheries .block .img img {
