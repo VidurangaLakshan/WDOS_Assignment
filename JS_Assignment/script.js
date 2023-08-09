@@ -1656,7 +1656,7 @@ today = dd + '/' + mm + '/' + yyyy;
 
 
 
-if (window.location.href == "http://127.0.0.1:5500/booking.html") {
+if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/booking.html") {
     document.getElementById('day').innerText = today;
 }
 
@@ -1698,7 +1698,7 @@ if (window.location.href == "http://127.0.0.1:5500/booking.html") {
 
 
 
-if (window.location.href == "http://127.0.0.1:5500/details.html") {
+if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/details.html") {
 
     if (sessionStorage.getItem("local-data1") != 0) {
         document.getElementById("SLAdult").style.display = "";
@@ -1820,12 +1820,12 @@ function btnSubmit() {
 }
 
 function btn2() {
-    window.location.href = "http://127.0.0.1:5500/payment.html";
+    window.location.href = "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/payment.html";
 }
 
 
 
-if (window.location.href == "http://127.0.0.1:5500/payment.html") {
+if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/payment.html") {
 
     if (sessionStorage.getItem("local-data1") != 0) {
         document.getElementById("SLAdult").style.display = "";
@@ -1873,12 +1873,12 @@ if (window.location.href == "http://127.0.0.1:5500/payment.html") {
 }
 
 function pay() {
-    window.location.href = "http://127.0.0.1:5500/confirmation.html";
+    window.location.href = "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/confirmation.html";
 
 }
 
 
-if (window.location.href == "http://127.0.0.1:5500/confirmation.html") {
+if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/confirmation.html") {
     
     document.getElementById("name").innerText = sessionStorage.getItem("local-name");
     document.getElementById("day2").innerText = sessionStorage.getItem("local-date");
