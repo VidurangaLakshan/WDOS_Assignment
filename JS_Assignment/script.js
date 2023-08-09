@@ -1,4 +1,4 @@
-if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/booking.html") {
+if (window.location.href == "JS_Assignment/booking.html") {
 
     let data1 = 0;
     let data2 = 0;
