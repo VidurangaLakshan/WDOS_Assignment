@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js" defer></script>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+        }
+
+        .container {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            padding-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        .container form {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+            padding: 20px;
+            width: 600px;
+            padding-top: 160px;
+
+        }
+
+        @media screen and (max-width:1100px) {
+            .container form {
+                width: 500px;
+            }
+        }
+
+        .container form .inputBox {
+            margin-top: 20px;
+        }
+
+        .container form .inputBox span {
+            display: block;
+            color: #999;
+            padding-bottom: 5px;
+        }
+
+        .container form .inputBox input,
+        .container form .inputBox select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, .3);
+            color: #444;
+        }
+
+        .container form .flexbox {
+            display: flex;
+            gap: 15px;
+        }
+
+        .container form .flexbox .inputBox {
+            flex: 1 1 150px;
+        }
+
+        .container form .submit-btn {
+            width: 100%;
+            background: linear-gradient(45deg, blueviolet, deeppink);
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .2s linear;
+        }
+
+        .container form .submit-btn:hover {
+            letter-spacing: 2px;
+            opacity: .8;
+        }
+
+        .container .card-container {
+            margin-bottom: -150px;
+            position: relative;
+            height: 250px;
+            width: 400px;
+        }
+
+        .container .card-container .front {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, blueviolet, deeppink);
+            border-radius: 5px;
+            backface-visibility: hidden;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+            padding: 20px;
+            transform: perspective(1000px) rotateY(0deg);
+            transition: transform .4s ease-out;
+        }
+
+        .container .card-container .front .image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+
+        .container .card-container .front .image img {
+            height: 50px;
+        }
+
+        .container .card-container .front .card-number-box {
+            padding: 30px 0;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .container .card-container .front .flexbox {
+            display: flex;
+        }
+
+        .container .card-container .front .flexbox .box:nth-child(1) {
+            margin-right: auto;
+        }
+
+        .container .card-container .front .flexbox .box {
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .container .card-container .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(45deg, blueviolet, deeppink);
+            border-radius: 5px;
+            padding: 20px 0;
+            text-align: right;
+            backface-visibility: hidden;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+            transform: perspective(1000px) rotateY(180deg);
+            transition: transform .4s ease-out;
+        }
+
+        .container .card-container .back .stripe {
+            background: #000;
+            width: 100%;
+            margin: 10px 0;
+            height: 50px;
+        }
+
+        .container .card-container .back .box {
+            padding: 0 20px;
+        }
+
+        .container .card-container .back .box span {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .container .card-container .back .box .cvv-box {
+            height: 50px;
+            padding: 10px;
+            margin-top: 5px;
+            color: #333;
+            background: #fff;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .container .card-container .back .box img {
+            margin-top: 30px;
+            height: 30px;
+        }
+
+        span {
+            text-decoration: none;
+
+        }
+
+        .box span {
+            color: white;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width:400px) {
+            /* .cover {
+                display: block;
+            } */
+
+            .text {
+                display: none;
+            }
+
+            .img {
+                display: none;
+            }
+
+            .links {
+                padding-left: 25px;
+            }
+
+            .flexSet {
+                flex-direction: column;
+            }
+
+            .table-flex {
+                flex-direction: column;
+            }
+
+            .inner-flex3 {
+                width: 0px;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .container form {
+                width: 350px;
+            }
+
+            #cvv {
+                margin-bottom: 32px;
+            }
+
+            .container .card-container .front {
+                position: absolute;
+                height: 85%;
+                width: 80%;
+                top: 30px;
+                left: 40px;
+
+            }
+
+            .container .card-container .front .image {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 0px;
+            }
+
+            .container .card-container .front .card-number-box {
+                padding: 30px 0;
+                font-size: 16px;
+                color: #fff;
+            }
+
+            .container .card-container .front .flexbox .box {
+                font-size: 12px;
+                color: #fff;
+            }
+
+            .container .card-container .back {
+                position: absolute;
+                top: 30px;
+                left: 40px;
+                height: 85%;
+                width: 80%;
+            }
+
+            .container .card-container .back .box img {
+                margin-top: 10px;
+                height: 30px;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <section class="cover">
+        <div class="first">
+            <p><a href="https://www.google.com">&#60; Home</a></p>
+        </div>
+        <div class="second">
+            <h1>Buy Tickets</h1>
+        </div>
+        <div class="third">
+            <div class="text">
+                <p>Show your tickets via mobile</p>
+                <p>device or print at home</p>
+            </div>
+            <div class="img">
+                <img src="phone.png" alt="phone">
+            </div>
+        </div>
+    </section>
+    <section class="links">
+        <p>Tickets > Details > <span>Payments</span> > Confirmation</p>
+    </section>
+
+
+    <div class="table-flex" style="background-color: #faf8f1;">
+        <div class="inner-flex3">
+
+            <div class="container">
+
+                <div class="card-container" style="z-index: 1;">
+
+                    <div class="front">
+                        <div class="image">
+                            <img src="image/chip.png" alt="">
+                            <img src="image/visa.png" alt="">
+                        </div>
+                        <div class="card-number-box">################</div>
+                        <div class="flexbox">
+                            <div class="box">
+                                <span>card holder</span>
+                                <div class="card-holder-name">full name</div>
+
+                            </div>
+                            <div class="box">
+                                <span>expires</span>
+                                <div class="expiration">
+                                    <span class="exp-month">mm</span>
+                                    <span class="exp-year">yy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="back">
+                        <div class="stripe"></div>
+                        <div class="box">
+                            <span>cvv</span>
+                            <div class="cvv-box"></div>
+                            <img src="image/visa.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <form action="" id="paymentPageForm">
+                    <div class="inputBox">
+                        <span style="color: black;">card number</span>
+                        <input type="number" max="9999999999" class="card-number-input" id="cardNo">
+                        <p style="font-size: small; color: red; text-transform: none;">*This is a required field</p>
+
+                    </div>
+                    <div class="inputBox">
+                        <span style="color: black;">card holder</span>
+                        <input type="text" class="card-holder-input" maxlength="30" id="cardName">
+                        <p style="font-size: small; color: red; text-transform: none;">*This is a required field</p>
+
+                    </div>
+                    <div class="flexbox">
+                        <div class="inputBox">
+                            <span style="color: black;">expiration mm</span>
+                            <select name="" id="cardMonth" class="month-input">
+                                <option value="month" selected disabled>MONTH</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <p style="font-size: small; color: red; text-transform: none;">*This is a required field</p>
+
+                        </div>
+                        <div class="inputBox">
+                            <span style="color: black;">expiration yy</span>
+                            <select name="" id="cardYear" class="year-input">
+                                <option value="year" selected disabled>YEAR</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                            <p style="font-size: small; color: red; text-transform: none;">*This is a required field</p>
+
+                        </div>
+                        <div class="inputBox">
+                            <span style="color: black;" id="cvv">cvv</span>
+                            <input type="number" max="999" class="cvv-input">
+                            <p style="font-size: small; color: red; text-transform: none;">*This is a required field</p>
+                        </div>
+                    </div>
+                    <button type="button" class="submit-btn" id="paymentBox" onclick="pay()"></button>
+                </form>
+
+            </div>
+
+
+        </div>
+        <hr>
+
+        <section class="table">
+
+            <h3>Summary of your Booking</h3>
+            <span>
+                <p>The Summary of the Order and Total Payable is Displayed in the Table below </p>
+            </span>
+
+
+            <div class="sticky">
+
+
+                <table>
+                    <tr>
+                        <td>Date</td>
+                        <td id="day2"></td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td id="timeLimits2"></td>
+                    </tr>
+                    <tr>
+                        <td>Duration</td>
+                        <td id="duration2"></td>
+                    </tr>
+                    <tr>
+                        <th style="background: rgba(255, 255, 255, 0.45);">Tickets</th>
+                        <th style="background: rgba(255, 255, 255, 0.45);">Charges</th>
+                    </tr>
+                    <tr id="foreignAdult" style="display: none;">
+                        <td id="fa2"></td>
+                        <td id="fa_Charge2"></td>
+                    </tr>
+                    <tr id="foreignChild" style="display: none;">
+                        <td id="fc2"></td>
+                        <td id="fc_Charge2"></td>
+                    </tr>
+                    <tr id="SLAdult" style="display: none;">
+                        <td id="sla2"></td>
+                        <td id="sla_Charge2"></td>
+                    </tr>
+                    <tr id="SLChild" style="display: none;">
+                        <td id="slc2"></td>
+                        <td id="slc_Charge2"></td>
+                    </tr>
+                    <tr id="Infant" style="display: none;">
+                        <td id="infant2"></td>
+                        <td id="infant_Charge2"></td>
+                    </tr>
+                    <tr>
+                        <th style="background: rgba(255, 255, 255, 0.45);">Total Payable</th>
+                        <th style="background: rgba(255, 255, 255, 0.45);" id="total2"></th>
+                    </tr>
+                </table>
+
+            </div>
+        </section>
+    </div>
+
+    <section style="display: none;">
+        <div id="peakValueStore"></div>
+        <div id="hoursValueStore"></div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2023. All Rights Reserved || Turtles' Hatch By Viduranga Lakshan</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        document.querySelector('.card-number-input').oninput = () => {
+            document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+        }
+
+        document.querySelector('.card-holder-input').oninput = () => {
+            document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+        }
+
+        document.querySelector('.month-input').oninput = () => {
+            document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+        }
+
+        document.querySelector('.year-input').oninput = () => {
+            document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+        }
+
+        document.querySelector('.cvv-input').onmouseenter = () => {
+            document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+            document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+        }
+
+        document.querySelector('.cvv-input').onmouseleave = () => {
+            document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+            document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+        }
+
+        document.querySelector('.cvv-input').oninput = () => {
+            document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

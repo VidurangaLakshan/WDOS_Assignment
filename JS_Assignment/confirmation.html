@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js" defer></script>
+
+    <style>
+        @media screen and (max-width:400px) {
+            /* .cover {
+                display: block;
+            } */
+
+            .text {
+                display: none;
+            }
+
+            .img {
+                display: none;
+            }
+
+            .links {
+                padding-left: 25px;
+            }
+
+            .table span {
+                padding: 0 0px 30px 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="cover">
+        <div class="first">
+            <p><a href="https://www.google.com">&#60; Home</a></p>
+        </div>
+        <div class="second">
+            <h1>Buy Tickets</h1>
+        </div>
+        <div class="third">
+            <div class="text">
+                <p>Show your tickets via mobile</p>
+                <p>device or print at home</p>
+            </div>
+            <div class="img">
+                <img src="phone.png" alt="phone">
+            </div>
+        </div>
+    </section>
+    <section class="links">
+        <p>Tickets > Details > Payment > <span>Confirmation</span></p>
+    </section>
+
+
+    <section class="table" id="tableConfirm">
+
+        <h3>Summary of your Booking</h3>
+        <span>
+            <p style="text-align: center; color: white;">Thank you for your order. Your order has been confirmed with
+                us.</p>
+            <p style="text-align: center; color: white;"> You can show this confirmation at the entrance.</p>
+            <p style="text-align: center; color: white;"> Following is the summary of your order.</p>
+        </span>
+
+
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td id="name">sample_name</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td id="day2">current_date</td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="timeLimits2">07.00 am to 08.00 am</td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="duration2">1 hrs ( 01 Normal : 00 Peak)</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td id="tel">sample_number</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td id="email">sample_email</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="gender">sample_gender</td>
+            </tr>
+            <tr>
+                <th style="background: rgba(255, 255, 255, 0.45);">Tickets</th>
+                <th style="background: rgba(255, 255, 255, 0.45);">Charges</th>
+            </tr>
+            <tr id="foreignAdult" style="display: none;">
+                <td id="fa2"></td>
+                <td id="fa_Charge2"></td>
+            </tr>
+            <tr id="foreignChild" style="display: none;">
+                <td id="fc2"></td>
+                <td id="fc_Charge2"></td>
+            </tr>
+            <tr id="SLAdult" style="display: none;">
+                <td id="sla2"></td>
+                <td id="sla_Charge2"></td>
+            </tr>
+            <tr id="SLChild" style="display: none;">
+                <td id="slc2"></td>
+                <td id="slc_Charge2"></td>
+            </tr>
+            <tr id="Infant" style="display: none;">
+                <td id="infant2"></td>
+                <td id="infant_Charge2"></td>
+            </tr>
+            <tr>
+                <th style="background: rgba(255, 255, 255, 0.45);">Total Payable</th>
+                <th style="background: rgba(255, 255, 255, 0.45);" id="total2"></th>
+            </tr>
+        </table>
+
+    </section>
+
+
+    <section style="display: none;">
+        <div id="peakValueStore"></div>
+        <div id="hoursValueStore"></div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2023. All Rights Reserved || Turtles' Hatch By Viduranga Lakshan</p>
+    </footer>
+
+</body>
+
+</html>

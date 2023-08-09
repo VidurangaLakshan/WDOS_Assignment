@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js" defer></script>
+
+    <style>
+        @media screen and (max-width:400px) {
+            /* .cover {
+                display: block;
+            } */
+
+            .text {
+                display: none;
+            }
+
+            .img {
+                display: none;
+            }
+
+            .table-flex {
+                display: block;
+            }
+
+            .wrapper {
+                width: 370px;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            .guestbox {
+                margin: 0% 5% 0% 5%;
+                margin-bottom: 40px;
+            }
+
+            .sticky table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .links {
+                padding-left: 25px;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <section class="cover">
+        <div class="first">
+            <p><a href="index.html">&#60; Home</a></p>
+
+        </div>
+        <div class="second">
+            <h1>Buy Tickets</h1>
+        </div>
+        <div class="third">
+            <div class="text">
+                <p>Show your tickets via mobile</p>
+                <p>device or print at home</p>
+            </div>
+            <div class="img">
+                <img src="phone.png" alt="phone">
+            </div>
+        </div>
+    </section>
+    <section class="links">
+        <p><span>Tickets</span> > Details > Payments > Confirmation</p>
+    </section>
+    <div class="table-flex">
+        <div class="inner-flex">
+            <section class="division">
+                <div class="body">
+                    <p>&nbsp;</p>
+                    <h3>When are you Visiting?</h3>
+                    <p>&nbsp;</p>
+                    <div class="wrapper">
+
+                        <header>
+                            <p class="current-date"></p>
+                            <div class="icons">
+                                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                <p>&nbsp;</p>
+                                <span id="next" class="material-symbols-rounded">chevron_right</span>
+                            </div>
+                        </header>
+                        <div class="calendar">
+                            <ul class="weeks">
+                                <li>Sun</li>
+                                <li>Mon</li>
+                                <li>Tue</li>
+                                <li>Wed</li>
+                                <li>Thu</li>
+                                <li>Fri</li>
+                                <li>Sat</li>
+                            </ul>
+                            <ul class="days"></ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <hr>
+            <section class="time">
+                <!-- time -->
+
+                <h3>Time Slot Selection for your Visit</h3>
+                <span>
+                    <p>The Hikkaduwa turtle hatchery will operate all seven days of the week from 07.00 am to 6.00 pm.
+                        Whole day
+                        has been divided to 1 hour based time slots. Visitors can select one single one hour slot or
+                        multiple
+                        consecutive one hour time slots</p>
+                </span>
+                <span style="color: white;">NOTE : 10AM TO 1PM & 3PM TO 6PM ARE PEAK HOURS</span>
+                <span></span>
+
+                <table>
+                    <tr>
+                        <th>Guest Type</th>
+                        <th>Normal Hour Charge ($)</th>
+                        <th>Peak Hour Charge ($)</th>
+                    </tr>
+                    <tr>
+                        <td>Foreign Adult</td>
+                        <td>10</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Foreign Child</td>
+                        <td>5</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>SL Adult</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>SL Child</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Infant</td>
+                        <td>Free</td>
+                        <td>Free</td>
+                    </tr>
+                </table>
+
+                <span class="span2">Please Select your Desired Time Slot(s)</span>
+
+                <nav class="time">
+                    <ul type="none" id="timeNav">
+<!--                         <li>Please Select your Preferrable Time</li>
+                        <p>&nbsp;</p> -->
+                        <input type="checkbox" id="click1" onclick="pick(),time()">
+                        <label for="click1">
+                            <li id="time1">07.00 am - 08.00 am</li>
+                        </label>
+
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click2" onclick="pick(),time()">
+                        <label for="click2">
+                            <li id="time2">08.00 am - 09.00 am</li>
+                        </label>
+
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click3" onclick="pick(),time()">
+                        <label for="click3">
+                            <li id="time3">09.00 am - 10.00 am</li>
+                        </label>
+
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click4" onclick="pick(),time()">
+                        <label for="click4">
+                            <li id="time4">10.00 am - 11.00 am</li>
+                        </label>
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click5" onclick="pick(),time()">
+                        <label for="click5">
+                            <li id="time5">11.00 am - 12.00 pm</li>
+                        </label>
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click6" onclick="pick(),time()">
+                        <label for="click6">
+                            <li id="time6">12.00 pm - 01.00 pm</li>
+                        </label>
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click7" onclick="pick(),time()">
+                        <label for="click7">
+                            <li id="time7">01.00 pm - 02.00 pm</li>
+                        </label>
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click8" onclick="pick(),time()">
+                        <label for="click8">
+                            <li id="time8">02.00 pm - 03.00 pm</li>
+                        </label>
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click9" onclick="pick(),time()">
+                        <label for="click9">
+                            <li id="time9">03.00 pm - 04.00 pm</li>
+                        </label>
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click10" onclick="pick(),time()">
+                        <label for="click10">
+                            <li id="time10">04.00 pm - 05.00 pm</li>
+                        </label>
+                        <p>&nbsp;</p>
+                        <input type="checkbox" id="click11" onclick="pick(),time()">
+                        <label for="click11">
+                            <li id="time11">05.00 pm - 06.00 pm</li>
+                        </label>
+                    </ul>
+                </nav>
+
+            </section>
+            <hr>
+            <section class="guests">
+                <!-- guests -->
+                <h3>Pick the Number of Guests?</h3>
+                <br>
+                <div class="guestbox">
+                    <div class="details">
+                        <div class="types">
+                            <h4>SL Adult</h4>
+                            <p style="color: white;">Above 15 yrs</p>
+                            <br>
+                            <h4>SL Child</h4>
+                            <p style="color: white;">5 to 14 yrs</p>
+                            <br>
+                            <h4>Foreigner Adult</h4>
+                            <p style="color: white;">Above 15 yrs</p>
+                            <br>
+                            <h4>Foreigner Child</h4>
+                            <p style="color: white;">5 to 14 yrs</p>
+                            <br>
+                            <h4>Infant</h4>
+                            <p style="color: white;">Under 4 yrs</p>
+                            <br>
+                        </div>
+                        <div class="qty">
+                            <div class="group">
+                                <button onclick="decrement(1)"><span id="sub"
+                                        class="material-symbols-outlined">remove</span></button>
+                                <label id="counter1" class="counter">&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;</label>
+                                <button onclick="increment(1)"><span id="add"
+                                        class="material-symbols-outlined">add</span></button>
+                            </div>
+                            <br>
+                            <p id="space">&nbsp;</p>
+                            <div class="group">
+                                <button onclick="decrement(2)"><span id="sub"
+                                        class="material-symbols-outlined">remove</span></button>
+                                <label id="counter2" class="counter">&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;</label>
+                                <button onclick="increment(2)"><span id="add"
+                                        class="material-symbols-outlined">add</span></button>
+                            </div>
+                            <br>
+                            <p id="space">&nbsp;</p>
+                            <div class="group">
+                                <button onclick="decrement(3)"><span id="sub"
+                                        class="material-symbols-outlined">remove</span></button>
+                                <label id="counter3" class="counter">&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;</label>
+                                <button onclick="increment(3)"><span id="add"
+                                        class="material-symbols-outlined">add</span></button>
+                            </div>
+                            <br>
+                            <p id="space">&nbsp;</p>
+                            <div class="group">
+                                <button onclick="decrement(4)"><span id="sub"
+                                        class="material-symbols-outlined">remove</span></button>
+                                <label id="counter4" class="counter">&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;</label>
+                                <button onclick="increment(4)"><span id="add"
+                                        class="material-symbols-outlined">add</span></button>
+                            </div>
+                            <br>
+                            <p id="space">&nbsp;</p>
+                            <div class="group">
+                                <button onclick="decrement(5)"><span id="sub"
+                                        class="material-symbols-outlined">remove</span></button>
+                                <label id="counter5" class="counter">&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;</label>
+                                <button onclick="increment(5)"><span id="add"
+                                        class="material-symbols-outlined">add</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr>
+        <section class="table">
+
+            <h3>Summary of your Booking</h3>
+            <span>
+                <p>The Summary of the Order and Total Payable is Displayed in the Table below </p>
+            </span>
+
+
+            <div class="sticky"> <!-- style="position: sticky;" -->
+
+
+                <table>
+                    <tr>
+                        <td>Date</td>
+                        <td id="day">current_date</td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td id="timeLimits">07.00 am to 08.00 am</td>
+                    </tr>
+                    <tr>
+                        <td>Duration</td>
+                        <td id="duration">1 hrs ( 01 Normal : 00 Peak)</td>
+                    </tr>
+                    <tr>
+                        <th style="background: rgba(255, 255, 255, 0.45);">Tickets</th>
+                        <th style="background: rgba(255, 255, 255, 0.45);">Charges</th>
+                    </tr>
+                    <tr id="foreignAdult">
+                        <td id="fa">1 Foreigner Adult</td>
+                        <td id="fa_Charge">$10</td>
+                    </tr>
+                    <tr id="foreignChild" style="display: none;">
+                        <td id="fc"></td>
+                        <td id="fc_Charge"></td>
+                    </tr>
+                    <tr id="SLAdult" style="display: none;">
+                        <td id="sla"></td>
+                        <td id="sla_Charge"></td>
+                    </tr>
+                    <tr id="SLChild" style="display: none;">
+                        <td id="slc"></td>
+                        <td id="slc_Charge"></td>
+                    </tr>
+                    <tr id="Infant" style="display: none;">
+                        <td id="infant"></td>
+                        <td id="infant_Charge"></td>
+                    </tr>
+                    <tr>
+                        <th style="background: rgba(255, 255, 255, 0.45);">Total Payable</th>
+                        <th style="background: rgba(255, 255, 255, 0.45);" id="total">$10</th>
+                    </tr>
+                </table>
+                <div class="end">
+                    <button onclick="btn()">Continue with Purchase</button>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section style="display: none;">
+        <div id="peakValueStore"></div>
+        <div id="hoursValueStore"></div>
+    </section>
+
+
+
+
+    <footer>
+        <p>Copyright © 2023. All Rights Reserved || Turtles' Hatch By Viduranga Lakshan</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-family: 'Poppins', sans-serif;
+}
+
+.cover {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* background-color: rgb(71, 115, 42); */
+  color: white;
+  align-items: center;
+  padding-bottom: 30px;
+  background-image: url('back_image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1500px 1000px;
+
+  /* background-image: url('back_image2.png'); */
+}
+
+.cover .second {
+  font-size: large;
+  font-size: 30px;
+}
+
+.cover .third {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.cover .third .img {
+  padding-left: 3px;
+}
+
+.cover .third img {
+  height: 48px;
+}
+
+.first a {
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  color: rgb(10, 126, 178);
+  font-weight: bold;
+}
+
+.links {
+  padding: 20px;
+  padding-left: 40px;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+}
+
+/*
+.dates {
+    background-color: orangered;
+    height: 300px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.dates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+.inner-flex2 {
+
+  width: 1000px;
+  margin: 50px;
+  /* background-color: rgb(172, 92, 221);*/
+  border-radius: 20px;
+  padding: 30px 20px 30px 20px;
+
+  /* From https://css.glass */
+
+  /* background: rgba(213, 178, 255, 0.2); */
+  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(178, 123, 255, 0.41); */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(178, 123, 255, 0.3);
+
+}
+
+.body h3 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+
+/* Calendar */
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 20px;
+  justify-content: center;
+  min-height: 80vh;
+  /* background-color: #faf8f1; */
+
+  /* background: #9B59B6;  /*  <-- purple color #9B59B6 */
+}
+
+.wrapper {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+
+
+}
+
+
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+.material-symbols-rounded {
+  background-color: rgb(250, 250, 250);
+}
+
+
+header .icons {
+  display: flex;
+}
+
+header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+header .icons span:hover {
+  background: #f2f2f2;
+}
+
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  /*   color: #333; */
+  color: rgb(27, 27, 27);
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #2e9292;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+
+
+
+
+
+/* Guests */
+
+.guestbox {
+  background-color: white;
+  padding-top: 30px;
+  margin: 0% 25% 0% 25%;
+  border-radius: 2%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  /* glass css */
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+
+}
+
+.qty span {
+  text-decoration: none;
+  color: #8a2be2;
+  border-radius: 100%;
+  background-color: #f6e7ff;
+  font-size: 1.9rem;
+  cursor: pointer;
+}
+
+.qty span:hover {
+  background: #8a2be2;
+  color: white;
+}
+
+.qty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25px;
+}
+
+.qty .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#space {
+  font-size: 10px;
+}
+
+.guests h3 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.guests .types p {
+  color: #aeaeae;
+  font-size: small;
+}
+
+.guests .types h4 {
+  font-size: 18px;
+}
+
+.guests .details {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.guests {
+  /* background-color: #faf8f1; */
+  min-height: 70vh;
+}
+
+.group button {
+  border-width: 0;
+  background-color: transparent;
+}
+
+/*
+.group label {
+  margin-top: -8px;
+}
+*/
+
+
+
+table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+
+  /* css glass */
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+
+
+
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.time h3 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.time span {
+  text-decoration: none;
+  color: black;
+  text-align: justify;
+  padding: 0 50px 30px 50px;
+}
+
+.time .span2 {
+  text-align: center;
+  width: 80%;
+  font-size: larger;
+  padding: 30px 50px 0px 50px;
+}
+
+.time ul li {
+  padding: 10px 70px;
+  border: 1px black solid;
+  background-color: #c399ea;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.time ul li:hover {
+  background-color: #a865e7;
+}
+
+.time ul p {
+  font-size: 2px;
+}
+
+.time {
+  /* background-color: #faf8f1; */
+  min-height: 83vh;
+
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.end {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.end button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  border-width: 0;
+  background-color: #47732a;
+  cursor: pointer;
+  background-color: #c399ea;
+  color: black;
+  border: 2px solid black;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /*   border: 1px solid rgba(255, 255, 255, 0.3);
+ */
+}
+
+.end button:hover {
+  background-color: #8a2be2;
+  color: white;
+  border: 2px solid #c399ea;
+
+
+
+}
+
+/*
+.endFoot {
+  display: flex;
+  justify-content: center;
+}
+
+.endFoot button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  border-width: 0;
+  background-color: #47732a;
+}
+*/
+
+
+/* division 
+
+.division {
+  display: flex;
+  justify-content: center;
+}
+
+
+*/
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
+}
+
+.table {
+  /* background-color: #faf8f1; */
+  min-height: 65vh;
+
+  padding: 50px;
+}
+
+.table h3 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.table span {
+  text-decoration: none;
+  color: black;
+  text-align: justify;
+  padding: 0 50px 30px 50px;
+}
+
+
+
+
+.table-flex {
+  display: flex;
+  /*   background-image: url('back_image.png');
+  background-image: url('back_image2.png'); */
+  background-image: url('back_image3.jpg');
+
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 2000px 1000px;
+
+
+}
+
+/* confirmation page */
+
+
+/* footer */
+
+footer {
+  color: white;
+  text-align: center;
+  background-color: black;
+  padding: 25px;
+}
+
+
+/* sticky table */
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*booking page css*/
+
+#timeNav {
+  text-align: center;
+  margin-top: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*details page css*/
+
+.detailsForm h1 {
+  color: white;
+}
+
+.inputBox {
+  margin: 15px 0;
+}
+
+.inputBox span {
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.inputBox input {
+  border: 3px solid rgb(187, 168, 187);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.inputBox input:hover {
+  border: 3px solid rgb(152, 69, 152);
+}
+
+.detailsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexSet {
+  display: flex;
+}
+
+
+
+
+
+/* payment page form */
+
+
+#paymentPageForm {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.inner-flex3 {
+  width: 1000px;
+  margin: 50px 0px 0px 0px;
+  border-radius: 20px;
+  padding: 0px 20px 0px 20px;
+
+}
+
+
+
+
+
+#tableConfirm {
+    /*   background-image: url('back_image.png');
+    background-image: url('back_image2.png'); */
+    background-image: url('back_image3.jpg');
+  
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 2000px 1000px;
+}

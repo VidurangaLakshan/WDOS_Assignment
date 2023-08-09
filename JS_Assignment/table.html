@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+            <div class="sticky"> <!-- style="position: fixed;" -->
+
+
+                <table>
+                    <tr>
+                        <td>Date</td>
+                        <td id="day2"></td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td id="timeLimits2"></td>
+                    </tr>
+                    <tr>
+                        <td>Duration</td>
+                        <td id="duration2"></td>
+                    </tr>
+                    <tr>
+                        <th>Tickets</th>
+                        <th>Charges</th>
+                    </tr>
+                    <tr id="foreignAdult" style="display: none;">
+                        <td id="fa2"></td>
+                        <td id="fa_Charge2"></td>
+                    </tr>
+                    <tr id="foreignChild" style="display: none;">
+                        <td id="fc2"></td>
+                        <td id="fc_Charge2"></td>
+                    </tr>
+                    <tr id="SLAdult" style="display: none;">
+                        <td id="sla2"></td>
+                        <td id="sla_Charge2"></td>
+                    </tr>
+                    <tr id="SLChild" style="display: none;">
+                        <td id="slc2"></td>
+                        <td id="slc_Charge2"></td>
+                    </tr>
+                    <tr id="Infant" style="display: none;">
+                        <td id="infant2"></td>
+                        <td id="infant_Charge2"></td>
+                    </tr>
+                    <tr>
+                        <th>Total Payable</th>
+                        <th id="total2"></th>
+                    </tr>
+                </table>
+                <div class="end">
+                    <button>Continue with Purchase</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--
+    <section class="endFoot">
+        <button>Continue with Purchase</button>
+    </section>
+-->
+
+    <div style="display: none;">
+        <label id="pageMarker">Page2</label>
+    </div>
+
+    <section style="display: none;">
+        <div id="peakValueStore"></div>
+        <div id="hoursValueStore"></div>
+    </section>
+
+</body>
+
+</html>
