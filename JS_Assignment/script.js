@@ -1,5 +1,26 @@
 if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/booking.html") {
 
+    
+
+let today = new Date();
+// console.log(today);
+
+let dd = today.getDate();
+let mm = today.getMonth() + 1;
+
+let yyyy = today.getFullYear();
+
+if (dd < 10) {
+    dd = '0' + dd;
+}
+if (mm < 10) {
+    mm = '0' + mm;
+}
+today = dd + '/' + mm + '/' + yyyy;
+
+document.getElementById('day').innerText = today;
+
+
     let data1 = 0;
     let data2 = 0;
     let data3 = 0;
@@ -1632,33 +1653,6 @@ function time() {
 
 
 
-
-let today = new Date();
-// console.log(today);
-
-let dd = today.getDate();
-let mm = today.getMonth() + 1;
-
-let yyyy = today.getFullYear();
-
-if (dd < 10) {
-    dd = '0' + dd;
-}
-if (mm < 10) {
-    mm = '0' + mm;
-}
-today = dd + '/' + mm + '/' + yyyy;
-
-// console.log(today);
-
-
-
-
-
-
-if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/booking.html") {
-    document.getElementById('day').innerText = today;
-}
 
 
 
