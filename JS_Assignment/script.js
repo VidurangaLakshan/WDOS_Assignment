@@ -1,4 +1,4 @@
-if (window.location.href == "http://127.0.0.1:5500/booking.html") {
+if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/booking.html") {
 
     let data1 = 0;
     let data2 = 0;
@@ -353,7 +353,7 @@ if (window.location.href == "http://127.0.0.1:5500/booking.html") {
 
         sessionStorage.setItem("local-total", document.getElementById("total").innerText);
 
-        window.location.href = "http://127.0.0.1:5500/details.html";
+        window.location.href = "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/details.html";
 
 
     }
