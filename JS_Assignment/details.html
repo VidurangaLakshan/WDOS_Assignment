@@ -131,7 +131,7 @@
 <body>
     <section class="cover">
         <div class="first">
-            <p><a href="https://www.google.com">&#60; Home</a></p>
+            <p><a href="../html_pages/hikkaduwa.html">&#60; Home</a></p>
         </div>
         <div class="second">
             <h1>Buy Tickets</h1>
@@ -160,14 +160,19 @@
                     <div class="flexSet">
                         <div class="inputBox">
                             <span>Full Name :</span>
-                            <input type="text" id="name" pattern="[A-Za-z]" required>
+                            <input type="text" id="name" required>
                             <p style="font-size: small; color: yellow;">*This is a required field</p>
+                            <p id="check1" style="display: none; color: yellow; margin-top: 0px; font-size: small">Please enter a valid full name.</p>
+
 
                         </div>
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         <div class="inputBox iti">
-                            <input type="tel" name="phone" maxlength="13" id="tel" required>
+                            <input type="tel" id="tel" required>
                             <p style="font-size: small; color: yellow;">*This is a required field</p>
+<!--                             <p id="check2" style="display: none; color: yellow; margin-top: 0px; font-size: small">Please enter a valid 10-digit mobile number.</p>
+ -->
+
 
                         </div>
                     </div>
@@ -176,6 +181,8 @@
                             <span>Email :</span>
                             <input type="email" id="email" required>
                             <p style="font-size: small; color: yellow;">*This is a required field</p>
+                            <p id="check3" style="display: none; color: yellow; margin-top: 0px; font-size: small">Please enter a valid Email ID.</p>
+
 
                         </div>
                         <p>&nbsp;&nbsp;&nbsp;</p>
@@ -183,15 +190,17 @@
                             <span>Confirm Email :</span>
                             <input type="text" id="email2" required>
                             <p style="font-size: small; color: yellow;">*This is a required field</p>
-                            <p id="emailError" style="display: none; color: red;">&nbsp;&nbsp;Email doesn't match</p>
+<!--                             <p id="emailError" style="display: none; color: red; font-size: small">&nbsp;&nbsp;Email doesn't match</p>
+ -->                            <p id="check4" style="display: none; color: yellow; margin-top: 0px; font-size: small">Email ID doesn't match</p>
+
                         </div>
                     </div>
                     <div class="flexSet">
                         <div class="inputBox">
                             <span>City :</span>
                             <input type="text" id="city" required>
-                            <p style="font-size: small; color: yellow;">*This is a required field</p>
-
+<!--                             <p style="font-size: small; color: yellow;">*This is a required field</p>
+ -->
                         </div>
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         <div class="inputBox">
@@ -204,16 +213,16 @@
                             font-weight: bold;
                             text-align: center;
                         "></select>
-                            <p style="font-size: small; color: yellow;">*This is a required field</p>
-
+<!--                             <p style="font-size: small; color: yellow;">*This is a required field</p>
+ -->
                         </div>
                     </div>
                     <div class="flexSet">
                         <div class="inputBox">
                             <span>Zip Code :</span>
                             <input type="number" id="zip" required>
-                            <p style="font-size: small; color: yellow;">*This is a required field</p>
-
+<!--                             <p style="font-size: small; color: yellow;">*This is a required field</p>
+ -->
                         </div>
                         <p>&nbsp;&nbsp;&nbsp;</p>
                         <div class="inputBox">
@@ -227,12 +236,13 @@
                                 <option value="" style="font-weight: bold; text-align: center;">Female</option>
                                 <option value="" style="font-weight: bold; text-align: center;">Prefer Not To Say
                                 </option>
+                                
                                 </option>
                             </select>
                         </div>
                     </div>
                 </form>
-                <button id="btnDetails" onclick="submit(),btnSubmit()">Submit</button>
+                <button id="btnDetails" onclick="submit(),btnSubmit(),validateForm()">Submit</button>
 
             </div>
 

@@ -1,25 +1,4 @@
-if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/booking.html") {
-
-    
-
-let today = new Date();
-// console.log(today);
-
-let dd = today.getDate();
-let mm = today.getMonth() + 1;
-
-let yyyy = today.getFullYear();
-
-if (dd < 10) {
-    dd = '0' + dd;
-}
-if (mm < 10) {
-    mm = '0' + mm;
-}
-today = dd + '/' + mm + '/' + yyyy;
-
-document.getElementById('day').innerText = today;
-
+if (window.location.href == "http://127.0.0.1:5500/booking.html") {
 
     let data1 = 0;
     let data2 = 0;
@@ -374,7 +353,7 @@ document.getElementById('day').innerText = today;
 
         sessionStorage.setItem("local-total", document.getElementById("total").innerText);
 
-        window.location.href = "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/details.html";
+        window.location.href = "http://127.0.0.1:5500/details.html";
 
 
     }
@@ -528,7 +507,7 @@ const renderCalendar = () => {
 
 
 
-if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/booking.html") {
+if (window.location.href == "http://127.0.0.1:5500/booking.html") {
 
     renderCalendar();
 
@@ -1654,6 +1633,32 @@ function time() {
 
 
 
+let today = new Date();
+// console.log(today);
+
+let dd = today.getDate();
+let mm = today.getMonth() + 1;
+
+let yyyy = today.getFullYear();
+
+if (dd < 10) {
+    dd = '0' + dd;
+}
+if (mm < 10) {
+    mm = '0' + mm;
+}
+today = dd + '/' + mm + '/' + yyyy;
+
+// console.log(today);
+
+
+
+
+
+
+if (window.location.href == "http://127.0.0.1:5500/booking.html") {
+    document.getElementById('day').innerText = today;
+}
 
 
 
@@ -1692,7 +1697,8 @@ function time() {
 
 
 
-if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/details.html") {
+
+if (window.location.href == "http://127.0.0.1:5500/details.html") {
 
     if (sessionStorage.getItem("local-data1") != 0) {
         document.getElementById("SLAdult").style.display = "";
@@ -1766,14 +1772,15 @@ function submit() {
 
     let Email1 = document.getElementById('email').value;
     let Email2 = document.getElementById('email2').value;
-    let EmailError = document.getElementById('emailError');
     document.getElementById('continuePurchase').disabled = false;
+
+/*     let EmailError = document.getElementById('emailError');
 
     if (Email1 != Email2) {
         EmailError.style.display = '';
     } else {
         EmailError.style.display = 'none';
-    }
+    } */
 
 }
 
@@ -1814,12 +1821,12 @@ function btnSubmit() {
 }
 
 function btn2() {
-    window.location.href = "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/payment.html";
+    window.location.href = "http://127.0.0.1:5500/payment.html";
 }
 
 
 
-if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/payment.html") {
+if (window.location.href == "http://127.0.0.1:5500/payment.html") {
 
     if (sessionStorage.getItem("local-data1") != 0) {
         document.getElementById("SLAdult").style.display = "";
@@ -1867,12 +1874,12 @@ if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/
 }
 
 function pay() {
-    window.location.href = "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/confirmation.html";
+    window.location.href = "http://127.0.0.1:5500/confirmation.html";
 
 }
 
 
-if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/confirmation.html") {
+if (window.location.href == "http://127.0.0.1:5500/confirmation.html") {
     
     document.getElementById("name").innerText = sessionStorage.getItem("local-name");
     document.getElementById("day2").innerText = sessionStorage.getItem("local-date");
@@ -1927,3 +1934,77 @@ if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/
     document.getElementById("total2").innerText = sessionStorage.getItem("local-total");
 
 }   
+
+
+
+
+
+
+
+
+
+
+// validation functions
+
+function validateForm() {
+    
+    var fullName = document.getElementById("name").value;
+/*     var mobileNumber = document.getElementById("tel").innerText;
+ */    var emailAddress = document.getElementById("email").value;
+    var emailConfirmAddress = document.getElementById("email2").value;
+
+    var nameRegex = /^[A-Za-z\s]+$/;
+    var mobileRegex = /^[0-9\+]{11,12}$/;
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+
+
+
+    if (!fullName.match(nameRegex)) {
+        document.getElementById("check1").style.display = "";
+        
+        return false;
+    }
+    document.getElementById("check1").style.display = "none";
+
+
+
+
+
+
+/* 
+    if (!mobileNumber.match(mobileRegex)) {
+        document.getElementById("check2").style.display = "";
+        return false;
+    }
+    document.getElementById("check2").style.display = "none";
+ */
+
+
+
+
+
+
+
+    if (!emailAddress.match(emailRegex)) {
+        document.getElementById("check3").style.display = "";
+        return false;
+    }
+    document.getElementById("check3").style.display = "none";
+
+
+
+
+
+
+
+    if (!emailConfirmAddress.match(emailAddress)) {
+        document.getElementById("check4").style.display = "";
+        return false;
+    }
+    document.getElementById("check4").style.display = "none";
+
+
+
+    return true;
+}

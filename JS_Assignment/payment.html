@@ -205,36 +205,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         @media screen and (max-width:400px) {
             /* .cover {
                 display: block;
@@ -325,7 +295,7 @@
 <body>
     <section class="cover">
         <div class="first">
-            <p><a href="https://www.google.com">&#60; Home</a></p>
+            <p><a href="../html_pages/hikkaduwa.html">&#60; Home</a></p>
         </div>
         <div class="second">
             <h1>Buy Tickets</h1>
@@ -388,7 +358,7 @@
                 <form action="" id="paymentPageForm">
                     <div class="inputBox">
                         <span style="color: black;">card number</span>
-                        <input type="number" max="9999999999" class="card-number-input" id="cardNo">
+                        <input type="number" class="card-number-input" id="cardNo" pattern="[0-9]{16}" required>
                         <p style="font-size: small; color: red; text-transform: none;">*This is a required field</p>
 
                     </div>
