@@ -353,7 +353,7 @@ if (window.location.href == "https://vidurangalakshan.github.io/WDOS_Assignment/
 
         sessionStorage.setItem("local-total", document.getElementById("total").innerText);
 
-        window.location.href = "http://127.0.0.1:5500/details.html";
+        window.location.href = "https://vidurangalakshan.github.io/WDOS_Assignment/JS_Assignment/details.html";
 
 
     }
